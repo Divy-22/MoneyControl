@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/addFood2"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/FoodEnter"
+        app:layout_constraintTop_toBottomOf="@+id/Remaining"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    <TextView
+        android:id="@+id/Total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Spent"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/Remaining"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:textColor="@color/white"
+
+        android:textSize="25sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/Food"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Spent"
+        app:srcCompat="@drawable/ic_baseline_fastfood_24" />
+
+    <ImageView
+        android:id="@+id/Edu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Food"
+        app:srcCompat="@drawable/ic_baseline_book_24" />
+
+    <ImageView
+        android:id="@+id/Home"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Edu"
+        app:srcCompat="@drawable/ic_baseline_store_24" />
+
+    <ImageView
+        android:id="@+id/OnlineShopping"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Home"
+        app:srcCompat="@drawable/ic_baseline_book_online_24" />
+
+    <TextView
+        android:id="@+id/FoodTotal"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:text="Food"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/Food"
+        app:layout_constraintTop_toBottomOf="@+id/Spent" />
+
+    <TextView
+        android:id="@+id/Booktotal"
+        android:layout_width="100dp"
+        android:textStyle="bold"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:background="@drawable/round"
+        android:text="Book"
+        app:layout_constraintStart_toEndOf="@+id/Edu"
+        app:layout_constraintTop_toBottomOf="@+id/FoodTotal" />
+
+    <TextView
+        android:id="@+id/HomeTotal"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Home"
+        app:layout_constraintStart_toEndOf="@+id/Home"
+        app:layout_constraintTop_toBottomOf="@+id/Booktotal" />
+
+    <TextView
+        android:id="@+id/OnlineTotal"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/round"
+        android:layout_marginTop="32dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Online"
+        app:layout_constraintStart_toEndOf="@+id/OnlineShopping"
+        app:layout_constraintTop_toBottomOf="@+id/HomeTotal" />
+
+    <EditText
+        android:inputType="number"
+        android:id="@+id/FoodEnter"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:hint="Enter Amount"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/FoodTotal"
+        app:layout_constraintTop_toBottomOf="@+id/Remaining" />
+
+    <EditText
+        android:inputType="number"
+        android:id="@+id/EduTotal"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:hint="Enter Amount"
+        android:textSize="14sp"
+        android:background="@drawable/round"
+        app:layout_constraintStart_toEndOf="@+id/Booktotal"
+        app:layout_constraintTop_toBottomOf="@+id/FoodEnter" />
+
+    <EditText
+        android:inputType="number"
+        android:id="@+id/HomeEnter"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:hint="Enter Amount"
+        android:textSize="14sp"
+        android:background="@drawable/round"
+        app:layout_constraintStart_toEndOf="@+id/HomeTotal"
+        app:layout_constraintTop_toBottomOf="@+id/EduTotal" />
+
+    <EditText
+        android:inputType="number"
+        android:id="@+id/OnlinEnter"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:hint="Enter Amount"
+        android:textSize="14sp"
+        android:background="@drawable/round"
+        app:layout_constraintStart_toEndOf="@+id/OnlineTotal"
+        app:layout_constraintTop_toBottomOf="@+id/HomeEnter" />
+
+    <ImageButton
+        android:id="@+id/addFood"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toEndOf="@+id/FoodEnter"
+        app:layout_constraintTop_toBottomOf="@+id/Remaining"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    <ImageButton
+        android:id="@+id/addEdu"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toEndOf="@+id/EduTotal"
+        app:layout_constraintTop_toBottomOf="@+id/addFood"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+
+
+    <ImageButton
+        android:id="@+id/addHome"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toEndOf="@+id/HomeEnter"
+        app:layout_constraintTop_toBottomOf="@+id/addEdu"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    <ImageButton
+        android:id="@+id/addOnline"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toEndOf="@+id/OnlinEnter"
+        app:layout_constraintTop_toBottomOf="@+id/addHome"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    <EditText
+        android:inputType="number"
+    android:id="@+id/EnterTotal"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:hint="Enter Total Amount"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OnlineTotal" />
+
+    <ImageButton
+        android:id="@+id/AddTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toEndOf="@+id/EnterTotal"
+        app:layout_constraintTop_toBottomOf="@+id/OnlinEnter"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <Button
+        android:id="@+id/Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#EC0000"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnterTotal" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:text="Spent"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Total" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="52dp"
+        android:text="Remaining"
+        android:textColor="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Total" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Total"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/Total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
